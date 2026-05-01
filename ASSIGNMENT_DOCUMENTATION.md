@@ -117,7 +117,7 @@ Another race condition occurs when threads write to the executionLog (ArrayList)
 
 **Your Answer**:
 
-[Your answer here - explain your implementation choices]
+[ReentrantLock is used to protect shared data by allowing only one thread to access a critical section at a time. Semaphore is used to control how many threads can access a resource simultaneously. In my code, I used ReentrantLock for shared variables like contextSwitchCount, completedProcessCount, and executionLog to prevent race conditions. I used a semaphore with 1 permit (cpuSemaphore) to control CPU access so only one process runs at a time. This helps keep the execution organized and prevents conflicts between threads.]
 
 ---
 
