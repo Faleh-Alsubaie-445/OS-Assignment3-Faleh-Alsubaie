@@ -70,16 +70,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 4 - [Date, Time]
-**What I implemented**: 
+### Entry 4 - [[4 May 2026, 8:30 PM]
+**What I implemented**: Improved the code and fixed small issues. Also made sure the execution log is protected to avoid errors.
 
-**Challenges encountered**: 
+**Challenges encountered**: Sometimes I got issues when multiple threads tried to write to the log at the same time.
 
-**How I solved it**: 
+**How I solved it**: I added a lock around the log operations to make it thread-safe.
 
-**Testing approach**: 
+**Testing approach**: I ran the program several times and confirmed there are no exceptions and results are stable.
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
