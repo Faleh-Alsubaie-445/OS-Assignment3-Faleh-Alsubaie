@@ -44,16 +44,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 2 - [Date, Time]
-**What I implemented**: 
+### Entry 2 - [3 May 2026, 9:00 PM]
+**What I implemented**: Started working on protecting shared variables. I added ReentrantLock to some counters in the code.
 
-**Challenges encountered**: 
+**Challenges encountered**: At first I was confused where exactly to put the lock and unlock, and sometimes the program didn’t behave correctly.
 
-**How I solved it**: 
+**How I solved it**: I reviewed the code and focused on the critical sections only. I made sure to lock before updating shared variables and unlock after.
 
-**Testing approach**: 
+**Testing approach**: I ran the program a few times and checked if values are changing correctly without errors.
 
-**Time spent**: 
+**Time spent**: 1.5 hours
 
 ---
 
