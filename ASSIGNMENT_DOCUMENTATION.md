@@ -126,7 +126,9 @@ Another race condition occurs when threads write to the executionLog (ArrayList)
 
 **Your Answer**:
 
-[Your answer here - reference try-finally blocks, lock ordering, etc.]
+[Deadlock is a situation where two or more threads are stuck waiting for each other and none of them can continue. One prevention technique is using try-finally to make sure locks are always released even if an error happens. Another technique is avoiding holding multiple locks at the same time to reduce circular waiting.
+
+In my code, I used try-finally blocks to always release the locks after using them. I also made sure each method uses only one lock at a time and releases it quickly. This helps prevent deadlocks and keeps the program running correctly.]
 
 ---
 
