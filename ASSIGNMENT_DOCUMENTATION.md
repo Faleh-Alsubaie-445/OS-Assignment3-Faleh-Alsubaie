@@ -106,7 +106,9 @@ Document your development process with **minimum 3 entries** showing progression
 
 **Your Answer**:
 
-[Your answer here - 4-6 sentences with code examples]
+[One race condition happens with shared counters like contextSwitchCount and completedProcessCount. These variables are accessed by multiple threads, and if they update them at the same time (like in incrementContextSwitch()), the value may become incorrect. This is because incrementing is not an atomic operation, so some updates can be lost.
+
+Another race condition occurs when threads write to the executionLog (ArrayList). If multiple threads call logExecution() at the same time, it can cause inconsistent data or runtime errors. This may result in missing or incorrect log entries during execution.]
 
 ---
 
