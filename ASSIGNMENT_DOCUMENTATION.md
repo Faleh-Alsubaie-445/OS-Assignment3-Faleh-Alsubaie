@@ -253,18 +253,29 @@ public void run() {
 ### Test 1: Consistency Check
 **What I tested**: Running program multiple times to verify consistent results
 
-**Testing procedure**: 
+**Testing procedure**: I ran the program several times using VS Code run button. Each time I observed the output such as context switches, completed processes, and waiting time.
 ```bash
-# Commands used (run the program at least 5 times)
+I ran the program 5 times using the Run button in VS Code.
 ```
 
 **Results**: 
-(Show that running multiple times produces consistent, correct results)
+(The results were consistent in all runs.
+
+* All processes completed successfully
+* No missing or duplicated data
+* Context switch count and waiting time were logical
+* No errors or crashes happened)
 
 **Why synchronization is necessary**: 
-(Explain what race conditions COULD occur without synchronization, even if you didn't observe them. Explain which shared resources need protection and why.)
+(Without synchronization, multiple threads could access shared variables at the same time. This may cause race conditions such as:
 
-**Conclusion**: 
+* Incorrect contextSwitchCount (wrong counting)
+* Wrong totalWaitingTime values
+* Errors in executionLog like missing or corrupted data
+
+These shared resources need protection because they are updated by multiple threads concurrently.)
+
+**Conclusion**: Synchronization ensures correct and stable results. It prevents race conditions and makes the program safe when multiple threads are running.
 
 ---
 
