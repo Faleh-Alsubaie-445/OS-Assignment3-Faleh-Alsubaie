@@ -296,10 +296,18 @@ These shared resources need protection because they are updated by multiple thre
 **What I tested**: Verifying correct final values (total burst time, context switches, etc.)
 
 **Expected values**: 
+1- All processes should finish execution
+2- completedProcessCount should equal number of processes
+3- contextSwitchCount should increase logically (based on number of quanta)
+4- totalWaitingTime should be a positive and reasonable value
 
 **Actual values**: 
+* All processes completed successfully
+* completedProcessCount matched the total number of processes
+* contextSwitchCount was consistent with execution flow
+* totalWaitingTime was calculated correctly without negative or incorrect values
 
-**Analysis**: 
+**Analysis**: The results matched the expected values. This shows that the synchronization mechanisms are working correctly. All shared variables were updated safely without errors, and the program produced accurate final results.
 
 ---
 
