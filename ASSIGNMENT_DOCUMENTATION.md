@@ -352,15 +352,15 @@ Give TWO examples where synchronization is critical:
 
 ## Part 6: GitHub Repository Information
 
-**Repository URL**: 
+**Repository URL**: https://github.com/Faleh-Alsubaie-445/OS-Assignment3-Faleh-Alsubaie.git
 
-**Number of commits**: 
+**Number of commits**:Total commits is 27
 
 **Commit messages**: 
-1. 
-2. 
-3. 
-4. 
+1. Set my student ID:445050053
+2. Task 1
+3. Method to increment context switch counter
+4. Method to increment completed process counter
 
 ---
 
