@@ -1,8 +1,8 @@
 # Assignment 3 - Complete Documentation
 
-**Student Name**: [Your Full Name]  
-**Student ID**: [Your ID]  
-**Date Submitted**: [Submission Date]
+**Student Name**: [Faleh Hamoud Alsubaie]  
+**Student ID**: [445050053]  
+**Date Submitted**: [1 May]
 
 ---
 
@@ -31,7 +31,7 @@
 
 Document your development process with **minimum 3 entries** showing progression:
 
-### Entry 1 - [3 May 2026, 4:30 PM]
+### Entry 1 - [28 April 2026, 4:30 PM]
 **What I implemented**: I added synchronization to the scheduler code. I used ReentrantLock to protect shared variables like counters, and I used a semaphore to control CPU access so only one thread runs at a time.
 
 **Challenges encountered**: I faced problems with threads affecting each other and giving wrong results. Also, I was worried about forgetting to release locks which might cause errors.
@@ -44,7 +44,7 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 2 - [3 May 2026, 9:00 PM]
+### Entry 2 - [28 April 2026, 9:00 PM]
 **What I implemented**: Started working on protecting shared variables. I added ReentrantLock to some counters in the code.
 
 **Challenges encountered**: At first I was confused where exactly to put the lock and unlock, and sometimes the program didn’t behave correctly.
@@ -57,7 +57,7 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 3 - [4 May 2026, 6:30 PM]
+### Entry 3 - [29 April 2026, 6:30 PM]
 **What I implemented**: I worked on controlling access to the CPU using a semaphore.
 
 **Challenges encountered**: I wasn’t sure how many permits to use and where to place acquire and release.
@@ -70,7 +70,7 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 4 - [[4 May 2026, 8:30 PM]
+### Entry 4 - [[29 April 2026, 8:30 PM]
 **What I implemented**: Improved the code and fixed small issues. Also made sure the execution log is protected to avoid errors.
 
 **Challenges encountered**: Sometimes I got issues when multiple threads tried to write to the log at the same time.
@@ -346,7 +346,7 @@ Give TWO examples where synchronization is critical:
 
 ### How I would explain synchronization to others:
 
-[Explain to someone who just finished Assignment 1 - use simple terms and analogies]
+[Synchronization is like a line for using one resource, like an ATM. Only one person can use it at a time while others wait. In programming, it makes sure threads don’t access the same data at the same time to avoid errors.]
 
 ---
 
