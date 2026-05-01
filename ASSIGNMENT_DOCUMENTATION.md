@@ -282,11 +282,13 @@ These shared resources need protection because they are updated by multiple thre
 ### Test 2: Exception Testing
 **What I tested**: Checking for ConcurrentModificationException
 
-**Testing procedure**: 
+**Testing procedure**: I ran the program multiple times and monitored the execution log while multiple threads were adding messages at the same time. I focused on the part where executionLog is updated by different threads.
 
-**Results**: 
 
-**What this proves**: 
+**Results**: No ConcurrentModificationException occurred in any run. The program executed normally and all log messages were added correctly without errors.
+
+
+**What this proves**: This proves that using ReentrantLock to protect the executionLog works correctly. It ensures that only one thread accesses the list at a time, which prevents concurrent modification problems.
 
 ---
 
