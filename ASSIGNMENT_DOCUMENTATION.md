@@ -293,7 +293,7 @@ These shared resources need protection because they are updated by multiple thre
 ---
 
 ### Test 3: Correctness Verification
-**What I tested**: Verifying correct final values (total burst time, context switches, etc.)
+**What I tested**: Verifying correct final values such as total waiting time, context switches, and completed processes.
 
 **Expected values**: 
 1- All processes should finish execution
@@ -312,13 +312,17 @@ These shared resources need protection because they are updated by multiple thre
 ---
 
 ### Test 4: Different Scenarios
-**Scenario tested**: [e.g., different time quantum, more processes, etc.]
+**Scenario tested**:I tested different scenarios by changing the time quantum and increasing the number of processes.
 
-**Purpose**: 
+**Purpose**: To check how the scheduler behaves under different conditions and make sure synchronization still works correctly.
 
 **Results**: 
+* When I increased the number of processes, the program still worked correctly without errors
+* When I changed the time quantum, the number of context switches changed logically
+* No crashes or incorrect values appeared in any scenario
 
-**What I learned**: 
+
+**What I learned**: I learned that synchronization works correctly in different situations. Even when the workload changes, the program remains stable and produces correct results.
 
 ---
 
