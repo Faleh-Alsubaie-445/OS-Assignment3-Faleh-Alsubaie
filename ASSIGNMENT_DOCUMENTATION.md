@@ -330,7 +330,7 @@ These shared resources need protection because they are updated by multiple thre
 
 ### What I learned about synchronization:
 
-[6-8 sentences about key concepts, challenges, insights]
+[In this assignment, I learned that synchronization is very important when working with multiple threads. I understood that shared resources like variables and lists can cause problems if accessed at the same time. I learned about race conditions and how they can lead to incorrect results. Using ReentrantLock helped me control access to shared data safely. I also learned how a Semaphore can be used to limit access to the CPU. One challenge I faced was understanding where to put locks correctly. After testing the program, I saw how synchronization keeps the output consistent and correct. Overall, this assignment helped me understand how threads work together safely.]
 
 ---
 
