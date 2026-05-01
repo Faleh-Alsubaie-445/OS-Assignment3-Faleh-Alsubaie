@@ -191,18 +191,27 @@ public static void addWaitingTime(long time) {
 
 ### Critical Section #2: Execution Log
 
-**What resource**: 
+**What resource**: The shared resource is executionLog, which is an ArrayList used to store log messages from all threads.
 
-**Why it needs protection**: 
+**Why it needs protection**: Because multiple threads may try to add messages at the same time, which can cause data corruption or ConcurrentModificationException.
 
-**Synchronization mechanism used**: 
+**Synchronization mechanism used**: I used ReentrantLock to protect the execution log.
 
 **Code snippet**:
 ```java
-// Paste your implementation here
+public static final ReentrantLock logLock = new ReentrantLock();
+
+public static void logExecution(String message) {
+    logLock.lock();
+    try {
+        executionLog.add(message);
+    } finally {
+        logLock.unlock();
+    }
+}
 ```
 
-**Justification**: 
+**Justification**: I used ReentrantLock to make sure only one thread can access the log at a time. This prevents race conditions and keeps the log correct and safe.
 
 ---
 
