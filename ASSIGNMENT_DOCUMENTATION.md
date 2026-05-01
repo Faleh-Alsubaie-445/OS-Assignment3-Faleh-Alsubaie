@@ -31,16 +31,16 @@
 
 Document your development process with **minimum 3 entries** showing progression:
 
-### Entry 1 - [Date, Time]
-**What I implemented**: 
+### Entry 1 - [3 May 2026, 4:30 PM]
+**What I implemented**: I added synchronization to the scheduler code. I used ReentrantLock to protect shared variables like counters, and I used a semaphore to control CPU access so only one thread runs at a time.
 
-**Challenges encountered**: 
+**Challenges encountered**: I faced problems with threads affecting each other and giving wrong results. Also, I was worried about forgetting to release locks which might cause errors.
 
-**How I solved it**: 
+**How I solved it**: I used try-finally with the locks to make sure they always unlock. I also used a semaphore with 1 permit to make sure only one thread uses the CPU.
 
-**Testing approach**: 
+**Testing approach**: I ran the program several times and checked if the results are consistent. I also checked that there are no errors during execution.
 
-**Time spent**: 
+**Time spent**: 2 Hours
 
 ---
 
