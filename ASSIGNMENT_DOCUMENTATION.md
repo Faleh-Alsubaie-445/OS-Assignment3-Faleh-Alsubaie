@@ -217,18 +217,34 @@ public static void logExecution(String message) {
 
 ### Critical Section #3: CPU Semaphore
 
-**Purpose of semaphore**: 
+**Purpose of semaphore**: The semaphore is used to control access to the CPU and make sure that only one process runs at a time.
 
-**Number of permits and why**: 
 
-**Where implemented**: 
+**Number of permits and why**: I used 1 permit because the CPU can only execute one process at a time (like a single-core CPU).
+
+
+**Where implemented**: It is implemented inside the run() method and runToCompletion() method before the process starts execution.
 
 **Code snippet**:
 ```java
-// Paste your implementation here
+public static final Semaphore cpuSemaphore = new Semaphore(1);
+
+@Override
+public void run() {
+    try {
+        SharedResources.cpuSemaphore.acquire();
+        try {
+            // process execution code
+        } finally {
+            SharedResources.cpuSemaphore.release();
+        }
+    } catch (InterruptedException e) {
+        System.out.println("Semaphore interrupted");
+    }
+}
 ```
 
-**Effect on program behavior**: 
+**Effect on program behavior**: The semaphore makes sure processes do not run at the same time. This prevents conflicts and keeps execution organized and correct.
 
 ---
 
