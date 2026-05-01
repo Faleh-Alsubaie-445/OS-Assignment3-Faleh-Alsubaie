@@ -149,18 +149,43 @@ In my code, I used try-finally blocks to always release the locks after using th
 
 ### Critical Section #1: Counter Variables
 
-**Which variables**: 
+**Which variables**: contextSwitchCount, completedProcessCount, totalWaitingTime
 
-**Why they need protection**: 
+**Why they need protection**: These variables are shared between multiple threads, and each thread updates them during execution. Without protection, concurrent updates can cause incorrect values or lost updates.
 
-**Synchronization mechanism used**: 
+**Synchronization mechanism used**: ReentrantLock (separate lock for each variable)
 
 **Code snippet**:
 ```java
-// Paste your implementation here
+public static void incrementContextSwitch() {
+    contextSwitchLock.lock();
+    try {
+        contextSwitchCount++;
+    } finally {
+        contextSwitchLock.unlock();
+    }
+}
+
+public static void incrementCompletedProcess() {
+    completedProcessLock.lock();
+    try {
+        completedProcessCount++;
+    } finally {
+        completedProcessLock.unlock();
+    }
+}
+
+public static void addWaitingTime(long time) {
+    waitingTimeLock.lock();
+    try {
+        totalWaitingTime += time;
+    } finally {
+        waitingTimeLock.unlock();
+    }
+}
 ```
 
-**Justification**: 
+**Justification**: I used ReentrantLock to ensure only one thread updates each variable at a time. This prevents race conditions and guarantees correct results. Using separate locks also reduces blocking between threads.
 
 ---
 
