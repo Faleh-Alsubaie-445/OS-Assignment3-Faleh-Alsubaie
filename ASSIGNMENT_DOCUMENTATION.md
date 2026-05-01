@@ -338,9 +338,9 @@ These shared resources need protection because they are updated by multiple thre
 
 Give TWO examples where synchronization is critical:
 
-**Example 1**: 
+**Example 1**: Banking systems: When multiple users try to withdraw or deposit money at the same time, synchronization is needed to prevent incorrect balance updates.
 
-**Example 2**: 
+**Example 2**: Online booking systems (like airline or cinema tickets): Synchronization is important to make sure that two users don’t book the same seat at the same time.
 
 ---
 
