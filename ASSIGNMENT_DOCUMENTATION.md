@@ -40,7 +40,7 @@ Document your development process with **minimum 3 entries** showing progression
 
 **Testing approach**: I ran the program several times and checked if the results are consistent. I also checked that there are no errors during execution.
 
-**Time spent**: 2 Hours
+**Time spent**: 2 hours
 
 ---
 
@@ -57,16 +57,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 3 - [Date, Time]
-**What I implemented**: 
+### Entry 3 - [4 May 2026, 6:30 PM]
+**What I implemented**: I worked on controlling access to the CPU using a semaphore.
 
-**Challenges encountered**: 
+**Challenges encountered**: I wasn’t sure how many permits to use and where to place acquire and release.
 
-**How I solved it**: 
+**How I solved it**: I used a binary semaphore (1 permit) and placed acquire before execution and release after finishing.
 
-**Testing approach**: 
+**Testing approach**: I tested by running multiple threads and checked that only one thread is executing at a time.
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
